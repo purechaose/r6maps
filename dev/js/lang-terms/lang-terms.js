@@ -355,7 +355,8 @@ var R6MLangTerms = (function(undefined) {
           hallway: 'Hallway',
           terrace: 'Terrace',
           stockTradingRoom: 'Stock<br/>Trading<br/>Room',
-          conferenceRoom: 'Conference<br/>Room'
+          conferenceRoom: 'Conference<br/>Room',
+          banana: 'Banana'
         },
         bartlett: {
           archwayHall: 'Archway Hall',

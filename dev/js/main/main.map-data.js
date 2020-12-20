@@ -211,7 +211,8 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 2, description: bankTerms.terrace, top: 147, left: 320 },
           { floor: 2, hardToRead: true, description: bankTerms.stockTradingRoom, top: 235, left: 117 },
           { floor: 2, hardToRead: true, description: bankTerms.conferenceRoom, top: 22, left: -32 },
-          { floor: 2, smaller: true, description: bankTerms.elevators, top: 170, left: -118 }
+          { floor: 2, smaller: true, description: bankTerms.elevators, top: 170, left: -118 },
+          { floor: 2, smaller: true, description: bankTerms.banana, top: -50, left: -200 }
         ]
       },
       bartlett: {
