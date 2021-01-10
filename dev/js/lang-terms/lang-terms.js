@@ -498,7 +498,10 @@ var R6MLangTerms = (function(undefined) {
           bathroomBalcony: 'Bathroom<br/>Balcony',
           libraryBalcony: 'Library<br/>Balcony',
           bedroomBalcony: 'Bedroom<br/>Balcony',
-          snowmobiles: 'Snowmobiles'
+          snowmobiles: 'Snowmobiles',
+          solarium: 'Solarium',
+          fireplace: 'Fireplace',
+          westMainEntrance: 'West Main Entrance'
         },
         club: {
           // EXT

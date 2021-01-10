@@ -529,109 +529,114 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           'bomb', 'hostage', 'secure'
         ],
         floors: [
-          { index: 0, top: -715, left: -1275, background: true, name: floorTerms.basement },
-          { index: 1, top: -556, left: -342, name: floorTerms.firstFloor, default: true },
-          { index: 2, top: -556, left: -342, name: floorTerms.secondFloor },
-          { index: 3, top: -556, left: -342, name: floorTerms.roof }
+          { index: 0, top: -175, left: -315, background: true, name: floorTerms.basement },
+          { index: 1, top: -175, left: -315, name: floorTerms.firstFloor, default: true },
+          { index: 2, top: -175, left: -315, name: floorTerms.secondFloor },
+          { index: 3, top: -175, left: -315, name: floorTerms.roof }
         ],
         hostageObjectives: [
-          { floor: 0, top: 62, left: 286 },
-          { floor: 1, top: -147, left: 412 },
-          { floor: 2, top: -267, left: 415 },
-          { floor: 2, top: 275, left: -30 }
+          { floor: 0, top: 500, left: 440 },
+          { floor: 1, top: 476, left: 528 },
+          { floor: 2, top: 135, left: 650 },
+          { floor: 2, top: 530, left: 240 }
         ],
         bombObjectives: [
-          { floor: 0, top: 220, left: 128, set: 3, letter: objectiveTerms.bombShortB },
-          { floor: 0, top: 100, left: 250, set: 3, letter: objectiveTerms.bombShortA },
-          { floor: 1, top: -403, left: 220, set: 4, letter: objectiveTerms.bombShortB },
-          { floor: 1, top: -254, left: 412, set: 4, letter: objectiveTerms.bombShortA },
-          { floor: 1, top: 118, left: 98, set: 2, letter: objectiveTerms.bombShortB },
-          { floor: 1, top: 186, left: -82, set: 2, letter: objectiveTerms.bombShortA },
-          { floor: 2, top: -160, left: 376, set: 1, letter: objectiveTerms.bombShortB },
-          { floor: 2, top: -18, left: 317, set: 1, letter: objectiveTerms.bombShortA }
+          { floor: 0, top: 542, left: 423, set: 4, letter: objectiveTerms.bombShortB },
+          { floor: 0, top: 391, left: 514, set: 4, letter: objectiveTerms.bombShortA },
+          { floor: 1, top: 92, left: 637, set: 3, letter: objectiveTerms.bombShortB },
+          { floor: 1, top: 265, left: 541, set: 3, letter: objectiveTerms.bombShortA },
+          { floor: 1, top: 490, left: 428, set: 2, letter: objectiveTerms.bombShortB },
+          { floor: 1, top: 524, left: 217, set: 2, letter: objectiveTerms.bombShortA },
+          { floor: 2, top: 115, left: 640, set: 1, letter: objectiveTerms.bombShortB },
+          { floor: 2, top: 215, left: 566, set: 1, letter: objectiveTerms.bombShortA }
         ],
         secureObjectives: [
-          { floor: 0, top: 252, left: 164 },
-          { floor: 1, top: -5, left: 284 },
-          { floor: 1, top: 188, left: 47 },
-          { floor: 2, top: 214, left: -54 }
+          { floor: 0, top: 305, left: 583 },
+          { floor: 1, top: 438, left: 478 },
+          { floor: 2, top: 220, left: 430 },
+          { floor: 2, top: 535, left: 215 }
         ],
         zoomPoints: {
-          topLeft: { top: -456, left: -113 },
-          bottomRight: { top: 382, left: 494 }
+          topLeft: { top: -175, left: -315 },
+          bottomRight: { top: 725, left: 1285 }
         },
         compassPoints: {
-          top: 494, left: 560
+          top: 405, left: 1155
         },
         ladders: [
-          { floor: 1, top: 69, left: -166, otherFloor: 'up' },
-          { floor: 2, top: 69, left: -166, otherFloor: 'down' },
-          { floor: 1, top: 6, left: 64, otherFloor: 'up' },
-          { floor: 2, top: 6, left: 64, otherFloor: 'down' },
-          { floor: 1, top: 319, left: 344, otherFloor: 'up' },
-          { floor: 2, top: 319, left: 344, otherFloor: 'down' },
-          { floor: 1, top: 14, left: 440, otherFloor: 'up' },
-          { floor: 2, top: 14, left: 440, otherFloor: 'down' },
-          { floor: 1, top: -91, left: -647, otherFloor: 'up' },
-          { floor: 2, top: -91, left: -647, otherFloor: 'down' },
-          { floor: 1, top: 353, left: -485, otherFloor: 'up' },
-          { floor: 2, top: 353, left: -485, otherFloor: 'down' }
+          { floor: 0, top: 645, left: 405, otherFloor: 'up' },
+          { floor: 1, top: 645, left: 405, otherFloor: 'down' },
+          { floor: 1, top: 380, left: 135, otherFloor: 'up' },
+          { floor: 2, top: 380, left: 135, otherFloor: 'down' },
+          { floor: 1, top: 575, left: 605, otherFloor: 'up' },
+          { floor: 2, top: 575, left: 605, otherFloor: 'down' },
+          { floor: 1, top: 267, left: 361, otherFloor: 'up' },
+          { floor: 2, top: 267, left: 361, otherFloor: 'down' },
+
+          { floor: 1, top: 600, left: -108, otherFloor: 'up' },
+          { floor: 2, top: 600, left: -108, otherFloor: 'down' }
         ],
         cameras: [
-          { floor: 1, otherFloor: 'up', top: -114, left: 198, id: 1, location: chaletTerms.bedroomHallway },
           {
-            floor: 2, top: -114, left: 198, id: 1, location: chaletTerms.bedroomHallway,
-            los: [[{top: -127, left: 317},{top: -127, left: 183},{top: 4, left: 183}]]
-          },
-          { floor: 1, otherFloor: 'up', top: 307, left: 296, id: 2, location: chaletTerms.fireplaceHallway },
-          {
-            floor: 2, top: 307, left: 296, id: 2, location: chaletTerms.fireplaceHallway,
-            los: [[{top: 370, left: 181},{top: 321, left: 255},{top: 321, left: 313},{top: 96, left: 313}]]
-          },
-          { floor: 1, otherFloor: 'up', top: 101, left: -109, id: 3, location: chaletTerms.libraryStairs },
-          { floor: 2, top: 101, left: -109, id: 3, location: chaletTerms.libraryStairs },
-          {
-            floor: 0, top: 150, left: 122, id: 4, location: chaletTerms.snowmobileGarage,
-            los: [[{top: 140, left: 61},{top: 121, left: 116},{top: 141, left: 187}]]
+            floor: 2, top: -83, left: 650, id: 1, location: chaletTerms.solarium,
+            los: [[{top: -71, left: 500}, {top: -67, left: 465},{top: -100, left: 464}, {top: -100, left: 662},{top: 194, left: 643}]]
           },
           {
-            outdoor: true, top: -36, left: -350, id: 5, location: chaletTerms.frontYard,
-            los: [[{top: -162, left: -384},{top: -30, left: -408},{top: 453, left: -425}]]
+            floor: 1, otherFloor: 'up', top: 363, left: 206, id: 2, location: chaletTerms.libraryStairs,
+            los: [[{top: 378, left: 370}, {top: 360, left: 290}, {top: 360, left: 200}, {top: 395, left: 200}, {top: 390, left: 280}, {top: 410, left: 320}]]
           },
           {
-            outdoor: true, top: -147, left: 838, id: 6, location: chaletTerms.backyard,
-            los: [[{top: 302, left: 1016},{top: -157, left: 878},{top: -695, left: 732}]]
+            floor: 2, top: 363, left: 206, id: 2, location: chaletTerms.libraryStairs,
+            los: [[{top: 335, left: 511}, {top: 335, left: 200}, {top: 390, left: 200}, {top: 390, left: 511}]]
+          },
+          {
+            floor: 1, otherFloor: 'up', top: 570, left: 580, id: 3, location: chaletTerms.fireplace,
+            los: [[{top: 545, left: 440}, {top: 545, left: 460}, {top: 570, left: 580}, {top: 370, left: 580}, {top: 360, left: 480}]]
+          },
+          {
+            floor: 2, top: 570, left: 580, id: 3, location: chaletTerms.fireplace,
+            los: [[{top: 500, left: 385}, {top: 530, left: 385}, {top: 490, left: 200}, {top: 520, left: 200}, {top: 560, left: 380}, {top: 615, left: 385}, {top: 615, left: 580}, {top: 400, left: 580}, {top: 405, left: 460}]]
+          },
+          {
+            floor: 1, top: 143, left: 424, id: 4, location: chaletTerms.westMainEntrance,
+            los: [[, {top: 35, left: 420}, {top: 143, left: 424}, {top: 205, left: 470}]]
+          },
+          {
+            floor: 0, top: 415, left: 421, id: 5, location: chaletTerms.snowmobileGarage,
+            los: [[{top: 410, left: 490}, {top: 410, left: 380}, {top: 600, left: 380}, {top: 600, left: 410}]]
+          },
+          {
+            outdoor: true, top: -83, left: 37, id: 6, location: chaletTerms.backyard,
+            los: [[{top: -140, left: 870},{top: -83, left: 37},{top: 40, left: -310}]]
+          },
+          {
+            outdoor: true, top: 160, left: 1060, id: 7, location: chaletTerms.frontYard,
+            los: [[{top: -10, left: 830},{top: 160, left: 1060},{top: 390, left: 945}]]
           }
         ],
         ceilingHatches: [
-          { floor: 0, top: 259, left: 116 },
-          { floor: 0, top: 302, left: 298 },
-          { floor: 0, top: 15, left: 378 },
-          { floor: 0, top: -431, left: 384 },
-          { floor: 0, top: -287, left: 210 },
-          { floor: 1, top: 250, left: -107 },
-          { floor: 1, top: 146, left: 59 },
-          { floor: 1, top: 64, left: 63 },
-          { floor: 1, top: 65, left: 235 },
-          { floor: 1, top: -285, left: 369 }
+          { floor: 0, top: 538, left: 557 },
+          { floor: 0, top: -70, left: 631 },
+          { floor: 0, top: 307, left: 629 },
+          { floor: 1, top: 475, left: 217 },
+          { floor: 1, top: 414, left: 359 },
+          { floor: 1, top: 164, left: 636 }
         ],
         skylights: [],
         droneTunnels: [
-          { floor: 0, top: -456, left: 203, rotate: 0, size: DRONE_MED },
-          { floor: 0, top: 378, left: 155, rotate: 0, size: DRONE_MED },
-          { floor: 0, top: 123, left: 172, rotate: 90, size: 62 },
-          { floor: 1, top: 63, left: 292, rotate: 90, size: 76 },
-          { floor: 1, top: 63, left: 165, rotate: 90, size: 44 },
-          { floor: 1, top: 39, left: 383, rotate: 0, size: DRONE_MED },
-          { floor: 1, top: 278, left: 20, rotate: 90, size: DRONE_SMALL },
-          { floor: 1, top: -330, left: 408, rotate: 90, size: DRONE_MED },
-          { floor: 2, top: -133, left: 240, rotate: 0, size: DRONE_SMALL }
+          { floor: 0, top: 612, left: 457, rotate: 0, size: DRONE_SMALL },
+          { floor: 0, top: 378, left: 488, rotate: 90, size: DRONE_SMALL },
+          { floor: 0, top: -83, left: 486, rotate: 0, size: DRONE_MED },
+          { floor: 1, top: 5, left: 662, rotate: 90, size: DRONE_MED },
+          { floor: 1, top: 229, left: 656, rotate: 90, size: DRONE_SMALL },
+          { floor: 1, top: 217, left: 477, rotate: 90, size: 45 },
+          { floor: 1, top: 300, left: 400, rotate: 0, size: 60 },
+          { floor: 1, top: 539, left: 200, rotate: 90, size: DRONE_SMALL }
         ],
         spawnPoints: [
-          { letter: spawnTerms.a, top: -309, left: -790, description: chaletTerms.spawnFrontYard },
-          { letter: spawnTerms.b, top: -652, left: 680, description: chaletTerms.spawnCampfire },
-          { letter: spawnTerms.c, top: 412, left: 886, description: chaletTerms.spawnCliffside },
-          { letter: spawnTerms.d, top: 540, left: -819, description: chaletTerms.spawnLakeside }
+          { letter: spawnTerms.a, top: -175, left: 865, description: chaletTerms.spawnCampfire },
+          { letter: spawnTerms.b, top: 400, left: 1080, description: chaletTerms.spawnCliffside },
+          { letter: spawnTerms.c, top: 445, left: -195, description: chaletTerms.spawnLakeside }
         ],
         roomLabels: [
           { floor: 0, hardToRead: true, smaller: true, top: 69, left: -82, description: chaletTerms.libraryStairs },
@@ -1825,10 +1830,10 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           'bomb', 'hostage', 'secure'
         ],
         floors: [
-          { index: 0, top: -715, left: -1275, background: true, name: floorTerms.basement },
-          { index: 1, top: -251, left: -382, name: floorTerms.firstFloor, default: true },
-          { index: 2, top: -251, left: -382, name: floorTerms.secondFloor },
-          { index: 3, top: -251, left: -382, name: floorTerms.roof }
+          { index: 0, top: 0, left: 0, background: true, name: floorTerms.basement },
+          { index: 1, top: 0, left: 0, name: floorTerms.firstFloor, default: true },
+          { index: 2, top: 0, left: 0, name: floorTerms.secondFloor },
+          { index: 3, top: 0, left: 0, name: floorTerms.roof }
         ],
         hostageObjectives: [
           { floor: 2, top: -110, left: -178 },
