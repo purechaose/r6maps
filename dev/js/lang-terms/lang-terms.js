@@ -1196,7 +1196,8 @@ var R6MLangTerms = (function(undefined) {
           sidePath: 'Side<br/>Path',
           sideStairs: 'Side<br/>Stairs',
           dragonStatue: 'Dragon<br/>Statue',
-          coveredWalkway: 'Covered<br/>Walkway'
+          coveredWalkway: 'Covered<br/>Walkway',
+          drums: 'Drums'
         },
         themepark: {
           // EXT

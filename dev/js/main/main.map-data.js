@@ -2970,108 +2970,97 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           'bomb', 'hostage', 'secure'
         ],
         floors: [
-          { index: 1, top: -715, left: -1275, background: true, name: floorTerms.firstFloor, default: true },
-          { index: 2, top: -653, left: -539, name: floorTerms.secondFloor },
-          { index: 3, top: -653, left: -539, name: floorTerms.roof }
+          { index: 1, top: -175, left: -630, background: true, name: floorTerms.firstFloor, default: true },
+          { index: 2, top: -175, left: -630, name: floorTerms.secondFloor },
+          { index: 3, top: -175, left: -630, name: floorTerms.roof }
         ],
         hostageObjectives: [
-          { floor: 2, top: 210, left: -100 },
-          { floor: 2, top: 294, left: 599 },
-          { floor: 1, top: 266, left: -22 },
-          { floor: 1, top: 241, left: 617 }
+          { floor: 2, top: 295, left: 200 },
+          { floor: 2, top: 390, left: 500 },
+          { floor: 1, top: 340, left: 45 },
+          { floor: 1, top: 495, left: 455 }
         ],
         bombObjectives: [
-          { floor: 2, top: 32, left: 118, set: 1, letter: objectiveTerms.bombShortA },
-          { floor: 2, top: 32, left: -100, set: 1, letter: objectiveTerms.bombShortB },
-          { floor: 2, top: 294, left: 566, set: 2, letter: objectiveTerms.bombShortA },
-          { floor: 2, top: 161, left: 620, set: 2, letter: objectiveTerms.bombShortB },
-          { floor: 1, top: 66, left: -113, set: 3, letter: objectiveTerms.bombShortA },
-          { floor: 1, top: 266, left: 10, set: 3, letter: objectiveTerms.bombShortB },
-          { floor: 1, top: 241, left: 651, set: 4, letter: objectiveTerms.bombShortA },
-          { floor: 1, top: 241, left: 474, set: 4, letter: objectiveTerms.bombShortB }
+          { floor: 2, top: 320, left: 175, set: 1, letter: objectiveTerms.bombShortA },
+          { floor: 2, top: 285, left: 30, set: 1, letter: objectiveTerms.bombShortB },
+          { floor: 2, top: 500, left: 545, set: 2, letter: objectiveTerms.bombShortA },
+          { floor: 2, top: 385, left: 495, set: 2, letter: objectiveTerms.bombShortB },
+          { floor: 1, top: 335, left: 40, set: 3, letter: objectiveTerms.bombShortA },
+          { floor: 1, top: 435, left: 50, set: 3, letter: objectiveTerms.bombShortB },
+          { floor: 1, top: 450, left: 550, set: 4, letter: objectiveTerms.bombShortA },
+          { floor: 1, top: 490, left: 450, set: 4, letter: objectiveTerms.bombShortB }
         ],
         secureObjectives: [
-          { floor: 2, top: 32, left: 82 },
-          { floor: 2, top: 341, left: 583 },
-          { floor: 1, top: 66, left: -78 },
-          { floor: 1, top: 286, left: 617 }
+          { floor: 2, top: 290, left: 35 },
+          { floor: 2, top: 525, left: 520 },
+          { floor: 1, top: 330, left: 35 },
+          { floor: 1, top: 455, left: 555 }
         ],
         zoomPoints: {
-          topLeft: { top: -213, left: -207 },
-          bottomRight: { top: 426, left: 762 }
+          topLeft: { top: -175, left: -630 },
+          bottomRight: { top: 725, left: 970 }
         },
         compassPoints: {
-          top: 505, left: 656
+          top: 370, left: 875
         },
         cameras: [
           {
-            floor: 2, top: 126, left: 167, id: 1, location: skyscraperTerms.hallway,
-            los: [
-              [{top: 134, left: -146}, {top: 125, left: -32}, {top: 112, left: -32}, {top: 112, left: 184}, {top: 283, left: 184}]
-            ]
+            floor: 1, otherFloor: 'up', top: 365, left: 310, id: 1, location: skyscraperTerms.drums,
+            los: [[{top: 315, left: 250}, {top: 365, left: 310}, {top: 245, left: 295}]]
           },
           {
-            floor: 1, top: -145, left: 38, id: 2, location: skyscraperTerms.restaurant,
-            los: [
-              [{top: -60, left: 4}, {top: -27, left: -15}],
-              [{top: 32, left: 125}, {top: 138, left: 163}]
-            ]
+            floor: 2, top: 365, left: 310, id: 1, location: skyscraperTerms.drums,
+            los: [[{top: 230, left: 245}, {top: 365, left: 310}, {top: 520, left: 310}]]
           },
           {
-            floor: 2, top: -11, left: 655, id: 3, location: skyscraperTerms.houseStairs,
-            los: [
-              [{top: -25, left: 567}, {top: -23, left: 457}],
-              [{top: 84, left: 637}, {top: 197, left: 636}]
-            ]
-          },
-          { floor: 1, top: -5, left: 622, otherFloor: 'up', id: 3, location: skyscraperTerms.houseStairs },
-          {
-            floor: 1, top: 65, left: 447, id: 4, location: skyscraperTerms.houseLobby,
-            los: [
-              [{top: 51, left: 555}, {top: 41, left: 584}],
-              [{top: 171, left: 486}, {top: 205, left: 501}],
-              [{top: 179, left: 554}, {top: 312, left: 673}],
-              [{top: 202, left: 554}, {top: 312, left: 642}]
-            ]
+            floor: 1, top: 145, left: 115, id: 2, location: skyscraperTerms.restaurant,
+            los: [[{top: 385, left: 180}, {top: 265, left: 145}, {top: 265, left: 110}, {top: 145, left: 115}, {top: 145, left: 230}, {top: 265, left: 230}, {top: 265, left: 185}, {top: 380, left: 255}]]
           },
           {
-            outdoor: true, top: -420, left: -226, id: 5, location: skyscraperTerms.westGarden,
-            los: [
-              [{top: -441, left: -308}, {top: -309, left: -395}],
-              [{top: -499, left: -166}, {top: -465, left: 62}]
-            ]
+            floor: 1, otherFloor: 'up', top: 280, left: 555, id: 3, location: skyscraperTerms.houseStairs,
+            los: [[{top: 360, left: 495}, {top: 280, left: 555}, {top: 315, left: 475}]]
           },
           {
-            outdoor: true, top: -114, left: 856, id: 6, location: skyscraperTerms.eastGarden,
-            los: [
-              [{top: -212, left: 494}, {top: -212, left: 849}, {top: -168, left: 879}, {top: 507, left: 860}]
-            ]
+            floor: 2, top: 280, left: 555, id: 3, location: skyscraperTerms.houseStairs,
+            los: [[{top: 360, left: 560}, {top: 280, left: 555}, {top: 290, left: 315}]]
           },
           {
-            outdoor: true, top: 597, left: 543, id: 7, location: skyscraperTerms.ventilationUnits,
-            los: [
-              [{top: 393, left: -213}, {top: 614, left: 228}],
-              [{top: 441, left: 365}, {top: 346, left: 273}],
-              [{top: 461, left: 818}, {top: 395, left: 877}]
-            ]
+            floor: 1, top: 335, left: 415, id: 4, location: skyscraperTerms.houseLobby,
+            los: [[{top: 245, left: 415}, {top: 335, left: 415}, {top: 480, left: 495}]]
+          },
+          {
+            outdoor: true, top: -10, left: -30, id: 5, location: skyscraperTerms.westGarden,
+            los: [[{top: -80, left: 210}, {top: -10, left: -30}, {top: 570, left: -120}]]
+          },
+          {
+            outdoor: true, top: 150, left: 690, id: 6, location: skyscraperTerms.eastGarden,
+            los: [[{top: 620, left: 675}, {top: 150, left: 690}, {top: 135, left: 285}]]
+          },
+          {
+            outdoor: true, top: 670, left: 700, id: 7, location: skyscraperTerms.ventilationUnits,
+            los: [[{top: 660, left: 295}, {top: 670, left: 700}, {top: 465, left: 755}]]
           }
         ],
         ceilingHatches: [
-          { floor: 1, top: 210, left: -61 },
-          { floor: 1, top: 289, left: 654 }
+          { floor: 1, top: 527, left: 581 },
+          { floor: 1, top: 463, left: 118 }
         ],
         skylights: [],
         droneTunnels: [
-          { floor: 1, top: 374, left: 632, rotate: 0, size: DRONE_MED },
-          { floor: 2, top: 189, left: 740, rotate: 90, size: DRONE_MED },
-          { floor: 2, top: 86, left: 450, rotate: 90, size: DRONE_MED },
-          { floor: 2, top: -124, left: 47, rotate: 0, size: DRONE_SMALL },
-          { floor: 2, top: 138, left: -154, rotate: 90, size: DRONE_MED }
+          { floor: 1, top: 150, left: 45, rotate: 0, size: 30 },
+          { floor: 1, top: 160, left: 55, rotate: 90, size: DRONE_SMALL },
+          { floor: 1, top: 245, left: 410, rotate: 90, size: DRONE_SMALL },
+          { floor: 1, top: 245, left: 310, rotate: 90, size: 8 },
+          { floor: 1, top: 255, left: 310, rotate: 0, size: DRONE_SMALL },
+          { floor: 1, top: 535, left: 610, rotate: 90, size: DRONE_SMALL },
+          { floor: 2, top: 420, left: 620, rotate: 90, size: DRONE_MED },
+          { floor: 2, top: 385, left: 330, rotate: 0, size: DRONE_SMALL },
+          { floor: 2, top: 345, left: 250, rotate: 90, size: DRONE_SMALL }
         ],
         spawnPoints: [
-          { letter: spawnTerms.a, top: -147, left: -789, description: skyscraperTerms.helipad },
-          { letter: spawnTerms.b, top: -556, left: 920, description: skyscraperTerms.tower },
-          { letter: spawnTerms.c, top: 581, left: 301, description: skyscraperTerms.ventilationUnits }
+          { letter: spawnTerms.a, top: 120, left: -355, description: skyscraperTerms.helipad },
+          { letter: spawnTerms.b, top: -100, left: 665, description: skyscraperTerms.tower },
+          { letter: spawnTerms.c, top: 680, left: 380, description: skyscraperTerms.ventilationUnits }
         ],
         roomLabels: [
           { floor: 1, top: 252, left: -77, description: skyscraperTerms.kitchen },
