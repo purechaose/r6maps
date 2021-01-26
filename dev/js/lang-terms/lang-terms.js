@@ -486,7 +486,7 @@ var R6MLangTerms = (function(undefined) {
           woodenTrail: 'Wooden<br/>Trail',
           campfireWood: 'Campfire Wood',
           backyard: 'Backyard',
-          gazeebo: 'Gazeebo',
+          gazeebo: 'Gazebo',
           cliffsideStairs: 'Cliffside<br/>Stairs',
           cliffsideWoods: 'Cliffside Woods',
           backyardPatio: 'Backyard Patio',
@@ -501,7 +501,20 @@ var R6MLangTerms = (function(undefined) {
           snowmobiles: 'Snowmobiles',
           solarium: 'Solarium',
           fireplace: 'Fireplace',
-          westMainEntrance: 'West Main Entrance'
+          westMainEntrance: 'West Main<br/>Entrance',
+          pianoRoom: 'Piano Room',
+          mezzanine: 'Mezzanine',
+          trophyStairs: 'Trophy Stairs',
+          diningHallway: 'Dining<br/>Hallway',
+          mudroom: 'Mudroom',
+          barStock: 'Bar Stock',
+          fireplaceStairs: 'Fireplace Stairs',
+          blueHallway: 'Blue Hallway',
+          carGarage: 'Car Garage',
+          mainGarageEntrance: 'Main<br/>Garage<br/>Entrance',
+          westMainStairs: 'West-Main<br/>Stairs',
+          cliffside: 'Cliffside',
+          campfire: 'Campfire'
         },
         club: {
           // EXT
