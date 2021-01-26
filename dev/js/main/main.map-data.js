@@ -557,8 +557,8 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 2, top: 535, left: 215 }
         ],
         zoomPoints: {
-          topLeft: { top: -175, left: -315 },
-          bottomRight: { top: 725, left: 1285 }
+          topLeft: { top: -130, left: 80 },
+          bottomRight: { top: 680, left: 890 }
         },
         compassPoints: {
           top: 405, left: 1155
