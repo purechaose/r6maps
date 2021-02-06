@@ -1839,144 +1839,163 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           'bomb', 'hostage', 'secure'
         ],
         floors: [
-          { index: 0, top: 0, left: 0, background: true, name: floorTerms.basement },
-          { index: 1, top: 0, left: 0, name: floorTerms.firstFloor, default: true },
-          { index: 2, top: 0, left: 0, name: floorTerms.secondFloor },
-          { index: 3, top: 0, left: 0, name: floorTerms.roof }
+          { index: 0, top: -383, left: -680, background: true, name: floorTerms.basement },
+          { index: 1, top: -249, left: -234, name: floorTerms.firstFloor, default: true },
+          { index: 2, top: -253, left: -234, name: floorTerms.secondFloor },
+          { index: 3, top: -282, left: -234, name: floorTerms.roof }
         ],
         hostageObjectives: [
-          { floor: 2, top: -110, left: -178 },
-          { floor: 0, top: 55, left: -29 },
-          { floor: 1, top: 57, left: 147 },
-          { floor: 2, top: 61, left: 91 }
+          { floor: 0, top: 56, left: 5 },
+          { floor: 1, top: 16, left: 198 },
+          { floor: 2, top: -140, left: -55 },
+          { floor: 2, top: 28, left: 203 }
         ],
         bombObjectives: [
-          { floor: 0, top: -59, left: -189, set: 3, letter: objectiveTerms.bombShortA },
-          { floor: 0, top: 10, left: 75, set: 3, letter: objectiveTerms.bombShortB },
-          { floor: 0, top: -59, otherFloor: 'up', left: -153, set: 2, letter: objectiveTerms.bombShortA },
-          { floor: 1, top: -66, otherFloor: 'down', left: -154, set: 2, letter: objectiveTerms.bombShortB },
-          { floor: 2, top: -110, left: -142, set: 1, letter: objectiveTerms.bombShortA },
-          { floor: 2, top: 123, left: -105, set: 1, letter: objectiveTerms.bombShortB }
+          { floor: 0, top: -16, left: 123, set: 4, letter: objectiveTerms.bombShortA },
+          { floor: 0, top: -115, left: -68, set: 4, letter: objectiveTerms.bombShortB },
+          { floor: 1, top: 160, left: 62, set: 3, letter: objectiveTerms.bombShortA },
+          { floor: 1, top: 144, left: -70, set: 3, letter: objectiveTerms.bombShortB },
+          { floor: 2, top: 28, left: 133, set: 2, letter: objectiveTerms.bombShortA },
+          { floor: 2, top: 70, left: -50, set: 2, letter: objectiveTerms.bombShortB },
+          { floor: 2, top: 70, left: -85, set: 1, letter: objectiveTerms.bombShortA },
+          { floor: 2, top: -140, left: -90, set: 1, letter: objectiveTerms.bombShortB }
         ],
         secureObjectives: [
-          { floor: 0, top: 85, left: 75 },
-          { floor: 1, top: -111, left: -154 },
-          { floor: 2, top: 123, left: -144 },
-          { floor: 2, top: 61, left: 129 }
+          { floor: 0, top: -16, left: 158 },
+          { floor: 1, top: -114, left: -71 },
+          { floor: 2, top: 70, left: -15 },
+          { floor: 2, top: 28, left: 168 }
         ],
         zoomPoints: {
-          topLeft: { top: -180, left: -259 },
-          bottomRight: { top: 177, left: 213 }
+          topLeft: { top: -250, left: -250 },
+          bottomRight: { top: 250, left: 250 }
         },
         compassPoints: {
-          top: 380, left: 397
+          top: 400, left: 560
         },
         ladders: [
-          { floor: 1, top: 476, left: 33, otherFloor: 'up' },
-          { floor: 2, top: 476, left: 33, otherFloor: 'down' },
-          { floor: 1, top: 117, left: -342, otherFloor: 'up' },
-          { floor: 2, top: 117, left: -342, otherFloor: 'down' },
-          { floor: 1, top: -486, left: -364, otherFloor: 'up' },
-          { floor: 2, top: -486, left: -364, otherFloor: 'down' },
-          { floor: 1, top: 61, left: 421, otherFloor: 'up' },
-          { floor: 2, top: 61, left: 421, otherFloor: 'down' }
+          { floor: 1, top: -10, left: -331, otherFloor: 'up' },
+          { floor: 2, top: -10, left: -331, otherFloor: 'down' },
+          { floor: 1, top: 46, left: -270, otherFloor: 'up' },
+          { floor: 2, top: 46, left: -270, otherFloor: 'down' }
         ],
         cameras: [
+          { floor: 2, top: -8, left: -166, id: 5, location: houseTerms.backStairs },
+          { floor: 1, top: -8, left: -166, otherFloor: 'up', id: 5, location: houseTerms.backStairs },
+          { floor: 2, top: -70, left: 74, id: 4, location: houseTerms.upperHallway },
+          { floor: 1, top: 13, left: 52, id: 3, location: houseTerms.kitchen },
           {
-            floor: 2, top: -105, left: 50, id: 1, location: houseTerms.frontPorchTop,
-            los: [[{top: -120, left: -71}, {top: -120, left: 69}, {top: 18, left: 69}]]
-          },
-          { floor: 1, otherFloor: 'up', top: -93, left: 50, id: 1, location: houseTerms.frontPorchTop },
-          {
-            floor: 1, top: 110, left: -3, id: 2, location: houseTerms.kitchen,
+            floor: 0, top: -65, left: -122, id: 1, location: houseTerms.gym,
             los: [
-              [{top: 102, left: -160}, {top: 115, left: -64}, {top: 122, left: -64}],
-              [{top: -1, left: 172}, {top: 91, left: 67}, {top: 122, left: 67}]
+              [{top: -89, left: -64}, {top: -140, left: 29}],
+              [{top: -182, left: -67}, {top: -237, left: -34}],
+              [{top: -182, left: -48}, {top: -218, left: -20}]
             ]
           },
           {
-            floor: 0, top: 4, left: -206, id: 3, location: houseTerms.trainingRoom,
+            floor: 0, top: -75, left: 85, id: 2, location: houseTerms.garage,
             los: [
-              [{top: 18, left: -24}, {top: 18, left: -220}],
-              [{top: -20, left: -88}, {top: -45, left: -30}],
-              [{top: -114, left: -133}, {top: -167, left: -112}],
-              [{top: -114, left: -108}, {top: -158, left: -79}]
+              [{top: -85, left: 79}, {top: -167, left: 71}],
+              [{top: 20, left: 202}, {top: 47, left: 232}],
+              [{top: 40, left: 202}, {top: 47, left: 208}],
+              [{top: 52, left: 96}, {top: 85, left: 101}],
+              [{top: 52, left: 116}, {top: 85, left: 125}]
             ]
           },
           {
-            floor: 0, top: -4, left: 36, id: 4, location: houseTerms.garage,
-            los: [[{top: 120, left: 22}, {top: -20, left: 22}, {top: -20, left: 0}, {top: -104, left: 21}]]
+            outdoor: true, top: -175, left: -270, id: 6, location: houseTerms.treeHouseAlley,
+            los: [[{top: -235, left: -320}, {top: -45, left: -184}]]
           },
           {
-            outdoor: true, top: -400, left: -289, id: 5, location: houseTerms.frontYard,
-            los: [[{top: -221, left: -603}, {top: -622, left: -166}]]
-          },
-          {
-            outdoor: true, top: 454, left: 291, id: 6, location: houseTerms.garden,
-            los: [[{top: 628, left: -29}, {top: 488, left: 570}]]
+            outdoor: true, top: 394, left: 345, id: 7, location: houseTerms.apcArea,
+            los: [[{top: 400, left: -130}, {top: 400, left: 618}]]
           }
         ],
         ceilingHatches: [
-          { floor: 0, top: -72, left: -120 },
-          { floor: 0, top: 56, left: -79 },
-          { floor: 1, top: 4, left: -19 },
-          { floor: 1, top: 52, left: 175 }
+          { floor: 0, top: -106, left: -145 },
+          { floor: 0, top: -20, left: -18 },
+          { floor: 0, top: 32, left: 235 },
+          { floor: 1, top: -70, left: 48 },
+          { floor: 1, top: -20, left: 240 }
         ],
         skylights: [],
         droneTunnels: [
-          { floor: 0, top: -7, left: 161, rotate: 45, size: 26, alternate: true },
-          { floor: 1, top: 126, left: 30, rotate: 340, size: 20, alternate: true }
+          { floor: 1, top: -74, left: -169, rotate: 351, size: 55, alternate: true },
+          { floor: 1, top: 38, left: -141, rotate: 90, size: 10, alternate: true },
+          { floor: 1, top: -183, left: 6, rotate: 0, size: 12, alternate: true },
+          { floor: 1, top: 205, left: 21, rotate: 0, size: 12, alternate: true }
         ],
         spawnPoints: [
-          { letter: spawnTerms.a, top: -589, left: -31, description: houseTerms.spawnConstructionSite },
-          { letter: spawnTerms.b, top: 218, left: 571, description: houseTerms.spawnRiverDocks },
-          { letter: spawnTerms.c, top: 542, left: -172, description: houseTerms.spawnAPCArea },
-          { letter: spawnTerms.d, top: 595, left: 387, description: houseTerms.spawnSideStreet }
+          // Construction Site and River Docks are commented out because they still exist in Training Grounds but not anywhere else.
+          // { letter: spawnTerms.a, top: -589, left: -31, description: houseTerms.spawnConstructionSite },
+          // { letter: spawnTerms.b, top: 218, left: 571, description: houseTerms.spawnRiverDocks },
+          { letter: spawnTerms.a, top: -439, left: 118, description: houseTerms.spawnFrontStreet },
+          { letter: spawnTerms.b, top: 515, left: -140, description: houseTerms.spawnAPCArea },
+          { letter: spawnTerms.c, top: 468, left: 390, description: houseTerms.spawnSideStreet }
         ],
         roomLabels: [
-          { floor: 0, top: -128, left: -141, description: houseTerms.depot },
-          { floor: 0, top: 2, left: -140, description: houseTerms.trainingRoom },
-          { floor: 0, top: 11, hardToRead: true, smaller: true, left: -55, description: houseTerms.kitchenStairs },
-          { floor: 0, top: 69, left: -232, description: houseTerms.sideStairs },
-          { floor: 0, top: 112, left: -90, description: houseTerms.laundryRoom },
-          { floor: 0, top: 64, left: 169, description: houseTerms.garage },
-          { floor: 1, top: -118, left: -109, hardToRead: true, description: houseTerms.livingRoom },
-          { floor: 1, top: 69, left: -232, description: houseTerms.sideStairs },
-          { floor: 1, top: 119, left: -117, hardToRead: true, description: houseTerms.backEntrance },
-          { floor: 1, top: -54, left: -33, hardToRead: true, description: houseTerms.lobby },
-          { floor: 1, top: 11, hardToRead: true, smaller: true, left: -55, description: houseTerms.kitchenStairs },
-          { floor: 1, top: 68, left: 29, description: houseTerms.kitchen },
-          { floor: 1, top: -54, left: 107, description: houseTerms.office },
-          { floor: 1, top: 58, left: 99, description: houseTerms.diningRoom },
-          { floor: 2, top: -25, left: -158, description: houseTerms.workshop },
-          { floor: 2, top: 64, left: -232, description: houseTerms.sideStairs },
-          { floor: 2, top: 93, left: -122, description: houseTerms.kidsBedroom },
-          { floor: 2, top: 19, left: -74, hardToRead: true, description: houseTerms.upperHallway },
-          { floor: 2, top: -53, left: 53, hardToRead: true, smaller: true, description: houseTerms.lobbyStairs },
-          { floor: 1, top: -53, left: 53, hardToRead: true, smaller: true, description: houseTerms.lobbyStairs },
-          { floor: 2, top: 101, left: -38, hardToRead: true, description: houseTerms.walkIn },
-          { floor: 2, top: 111, left: 116, hardToRead: true, description: houseTerms.masterBedroom },
-          { floor: 2, top: -24, left: 120, hardToRead: true, description: houseTerms.bathroom },
-          { outdoor: true, top: -217, left: 440, description: houseTerms.sideStreet },
-          { outdoor: true, top: 200, left: 440, description: houseTerms.sideStreet },
-          { outdoor: true, top: -16, left: 283, description: houseTerms.garageEntrance },
-          { outdoor: true, top: 295, left: 224, description: houseTerms.garden },
-          { outdoor: true, top: 229, left: -60, description: houseTerms.backAlley },
-          { outdoor: true, top: 295, left: -256, description: houseTerms.patio },
-          { outdoor: true, top: 398, left: -9, description: houseTerms.jacuzzi },
-          { outdoor: true, top: -70, left: -255, description: houseTerms.basementStairs },
-          { outdoor: true, top: 38, left: -295, description: houseTerms.treehouseAlley },
-          { outdoor: true, top: -281, left: -159, description: houseTerms.frontYard },
-          { outdoor: true, top: -281, left: 103, description: houseTerms.frontYard },
-          { outdoor: true, top: -548, left: -238, description: houseTerms.frontStreet },
-          { outdoor: true, top: -548, left: 226, description: houseTerms.frontStreet },
-          { floor: 1, top: -123, left: 35, description: houseTerms.frontPorch },
-          { floor: 1, top: 165, left: -72, description: houseTerms.backPorch },
-          { floor: 2, top: 165, left: 13, description: houseTerms.backPorchTop },
-          { floor: 3, top: 165, left: 13, description: houseTerms.backPorchTop },
-          { floor: 2, top: -135, left: 49, description: houseTerms.frontPorchTop },
-          { floor: 3, top: -135, left: 49, description: houseTerms.frontPorchTop },
-          { floor: 3, top: 1, left: -11, description: houseTerms.rooftop }
+          // EXT
+          { outdoor: true, top: 308, left: 271, description: houseTerms.apcArea },
+          { outdoor: true, top: 308, left: -146, description: houseTerms.apcArea },
+          { outdoor: true, top: 20, left: 461, description: houseTerms.sideStreet },
+          { outdoor: true, top: -36, left: 315, description: houseTerms.garageEntrance },
+          { outdoor: true, top: 150, left: 275, description: houseTerms.garageSide },
+          { outdoor: true, top: 218, left: -265, description: houseTerms.patio },
+          { outdoor: true, top: -142, left: -182, description: houseTerms.basementStairs },
+          { outdoor: true, top: -70, left: -236, description: houseTerms.treeHouseAlley },
+          { outdoor: true, top: -337, left: 160, description: houseTerms.frontYard },
+          { outdoor: true, top: -337, left: -95, description: houseTerms.frontYard },
+          { floor: 1, top: -193, left: 105, description: houseTerms.frontBalcony },
+          { floor: 1, top: 237, left: -35, description: houseTerms.backPorch },
+          { floor: 2, top: -235, left: 39, smaller: true, description: houseTerms.frontBalcony },
+          { floor: 2, top: 245, left: 7, description: houseTerms.backPorch },
+          { floor: 2, top: -208, left: 228, hardToRead: true, description: houseTerms.backPorchTop },
+          { floor: 2, top: 105, left: 199, smaller: true, description: houseTerms.readingRoomBalcony },
+
+          // Stairs
+          { floor: 0, top: -65, left: 5, hardToRead: true, smaller: true, description: houseTerms.kitchenStairs },
+          { floor: 0, top: -11, left: -127, hardToRead: true, description: houseTerms.backStairs },
+          { floor: 1, top: 190, left: 165, hardToRead: true, smaller: true, description: houseTerms.redStairs },
+          { floor: 1, top: -64, left: 16, hardToRead: true, smaller: true, description: houseTerms.kitchenStairs },
+          { floor: 1, top: -153, left: 113, hardToRead: true, smaller: true, description: houseTerms.lobbyStairs },
+          { floor: 1, top: -11, left: -127, hardToRead: true, description: houseTerms.backStairs },
+          { floor: 2, top: 192, left: 166, hardToRead: true, smaller: true, description: houseTerms.redStairs },
+          { floor: 2, top: -152, left: 114, hardToRead: true, smaller: true, description: houseTerms.lobbyStairs },
+          { floor: 2, top: -11, left: -127, hardToRead: true, description: houseTerms.backStairs },
+
+          // Basement
+          { floor: 0, top: -198, left: -80, veryHardToRead: true, description: houseTerms.depot },
+          { floor: 0, top: -135, left: -69, hardToRead: true, description: houseTerms.gym },
+          { floor: 0, top: 20, left: 5, hardToRead: true, description: houseTerms.laundryRoom },
+          { floor: 0, top: -36, left: 140, hardToRead: true, description: houseTerms.garage },
+          { floor: 0, top: 37, left: 199, veryHardToRead: true, smaller: true, description: houseTerms.garageEntrance },
+
+          // 1F
+          { floor: 1, top: -150, left: -71, hardToRead: true, description: houseTerms.gameRoom },
+          { floor: 1, top: 232, left: 114, hardToRead: true, smaller: true, description: houseTerms.backEntrance },
+          { floor: 1, top: -112, left: 39, hardToRead: true, description: houseTerms.lobby },
+          { floor: 1, top: -2, left: 66, hardToRead: true, description: houseTerms.kitchen },
+          { floor: 1, top: -117, left: 198, hardToRead: true, description: houseTerms.office },
+          { floor: 1, top: -20, left: 198, hardToRead: true, description: houseTerms.diningRoom },
+          { floor: 1, top: 103, left: 184, hardToRead: true, description: houseTerms.connector },
+          { floor: 1, top: 140, left: 62, hardToRead: true, description: houseTerms.tvRoom },
+          { floor: 1, top: 124, left: -70, hardToRead: true, description: houseTerms.musicRoom },
+
+          // 2F
+          { floor: 2, top: -160, left: -72, hardToRead: true, description: houseTerms.pinkRoom },
+          { floor: 2, top: -115, left: -1, hardToRead: true, description: houseTerms.girlsWalkIn },
+          { floor: 2, top: 50, left: -50, hardToRead: true, description: houseTerms.carRoom },
+          { floor: 2, top: 163, left: -55, hardToRead: true, description: houseTerms.playRoom },
+          { floor: 2, top: -38, left: 5, hardToRead: true, description: houseTerms.upperHallway },
+          { floor: 2, top: 36, left: 42, hardToRead: true, description: houseTerms.walkIn },
+          { floor: 2, top: 8, left: 168, hardToRead: true, description: houseTerms.masterBedroom },
+          { floor: 2, top: 131, left: 85, hardToRead: true, description: houseTerms.readingRoom },
+          { floor: 2, top: -98, left: 195, hardToRead: true, description: houseTerms.bathroom },
+          { floor: 2, top: -195, left: 112, hardToRead: true, description: houseTerms.bathroomHallway },
+
+          // 3F/Roof
+          { floor: 3, top: -10, left: 50, description: houseTerms.rooftop }
+
         ]
       },
       kafe: {
