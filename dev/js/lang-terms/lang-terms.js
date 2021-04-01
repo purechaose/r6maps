@@ -549,7 +549,7 @@ var R6MLangTerms = (function(undefined) {
 
           // 1F
           garage: 'Garage',
-          sideEntrance: 'Side Entracnce',
+          sideEntrance: 'Side Entrance',
           changingRoom: 'Changing<br/>Room',
           stripClub: 'Strip Club',
           lobby: 'Lobby',
