@@ -700,22 +700,49 @@ var R6MLangTerms = (function(undefined) {
           kidsRoom: 'Kids Room',
           mainStairs: 'Main<br/>Stairs',
           stairHall: 'Stair<br/>Hall',
-          roof: 'Roof',
+          roof: 'Roof', //
           laundryRoom: 'Laundry<br/>Room',
           vaultRoom: 'Vault<br/>Room',
           bikersGarage: 'Biker\'s<br/>Garage',
-          backAlley: 'Back Alley',
+          backAlley: 'Back Alley', //
           schoolAlley: 'School Alley',
-          footballPitch: 'Football Pitch',
+          footballField: 'Football<br/>Field',
           market: 'Market',
-          marketAlley: 'Market<br/>Alley',
-          schoolRooftops: 'School<br/>Rooftops',
-          street: 'Street',
-          rooftops: 'Rooftops',
-          courtyard: 'Courtyard',
+          marketAlley: 'Market<br/>Alley', //
+          schoolRoof: 'School<br/>Roof',
+          street: 'Street', //
+          rooftops: 'Rooftops', //
+          courtyard: 'Courtyard', //
           accessAlley: 'Access Alley',
           shop: 'Shop<br/>(not shown)',
-          marketRooftops: 'Market Rooftops'
+          marketRoof: 'Market Roof',
+          electrical: 'Electrical',
+          trashChuteStairs: 'Trash Chute<br/>Stairs',
+          redStairs: 'Red<br/>Stairs',
+          coinFarm: 'Coin Farm',
+          storage: 'Storage',
+          armory: 'Armory',
+          redCorridor: 'Red Corridor',
+          mezzanineStairs: 'Mezzanine<br/>Stairs',
+          bunks: 'Bunks',
+          office: 'Office',
+          hackerDen: 'Hacker<br/>Den',
+          greenBathroom: 'Green<br/>Bathroom',
+          greenApartment: 'Green Apartment',
+          greenFoosball: 'Green<br/>Foosball',
+          blueApartment: 'Blue<br/>Apartment',
+          blueBedroom: 'Blue Bedroom',
+          blueKitchen: 'Blue<br/>Kitchen',
+          laundryHall: 'Laundry<br/>Hall',
+          footballHall: 'Football<br/>Hall',
+          pinkApartment: 'Pink Apartment',
+          pinkKitchen: 'Pink Kitchen',
+          pinkSolarium: 'Pink<br/>Solarium',
+          tunnel: 'Tunnel',
+          schoolyard: 'Schoolyard',
+          solariumRoof: 'Solarium Roof',
+          armoryBalcony: 'Armory<br/>Balcony',
+          storageBalcony: 'Storage Balcony'
         },
         fortress: {
           // Spawns
