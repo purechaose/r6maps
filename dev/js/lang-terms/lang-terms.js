@@ -684,37 +684,15 @@ var R6MLangTerms = (function(undefined) {
           walkway: 'Walkway'
         },
         favela: {
-          packagingRoom: 'Packaging<br/>Room',
-          footballApartment: 'Football<br/>Apartment',
-          armoryRoom: 'Armory<br/>Room',
-          auntsApartment: 'Aunt\'s<br/>Apartment',
-          auntsBedroom: 'Aunt\'s<br/>Bedroom',
-          growRoom: 'Grow<br/>Room',
-          bikersApartment: 'Biker\'s<br/>Apartment',
-          methLab: 'Meth Lab',
-          footballBedroom: 'Football<br/>Bedroom',
-          footballOffice: 'Football<br/>Office',
-          bikersBedroom: 'Biker\'s<br/>Bedroom',
-          backStairs: 'Back<br/>Stairs',
-          auntsHall: 'Aunt\'s Hall',
-          kidsRoom: 'Kids Room',
-          mainStairs: 'Main<br/>Stairs',
-          stairHall: 'Stair<br/>Hall',
-          roof: 'Roof', //
-          laundryRoom: 'Laundry<br/>Room',
-          vaultRoom: 'Vault<br/>Room',
-          bikersGarage: 'Biker\'s<br/>Garage',
-          backAlley: 'Back Alley', //
-          schoolAlley: 'School Alley',
+          roof: 'Roof',
+          backAlley: 'Back Alley',
           footballField: 'Football<br/>Field',
           market: 'Market',
-          marketAlley: 'Market<br/>Alley', //
+          marketAlley: 'Market<br/>Alley',
           schoolRoof: 'School<br/>Roof',
-          street: 'Street', //
-          rooftops: 'Rooftops', //
-          courtyard: 'Courtyard', //
-          accessAlley: 'Access Alley',
-          shop: 'Shop<br/>(not shown)',
+          street: 'Street',
+          rooftops: 'Rooftops',
+          courtyard: 'Courtyard',
           marketRoof: 'Market Roof',
           electrical: 'Electrical',
           trashChuteStairs: 'Trash Chute<br/>Stairs',
