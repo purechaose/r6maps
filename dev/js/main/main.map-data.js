@@ -158,7 +158,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { outdoor: true, description: bankTerms.jewelryFront, top: -575, left: 538 },
           { outdoor: true, description: bankTerms.plaza, top: -295, left: 239 },
           { outdoor: true, description: bankTerms.mainEntrance, top: -448, left: -225 },
-          { outdoor: true, alwasyShow: true, description: bankTerms.garageRamp, top: -143, left: -486 },
+          { outdoor: true, alwaysShow: true, description: bankTerms.garageRamp, top: -143, left: -486 },
           { outdoor: true, description: bankTerms.exteriorParking, top: -216, left: -720 },
           { floor: 1, description: bankTerms.garageRoof, top: 236, left: -274 },
           { floor: 2, description: bankTerms.garageRoof, top: 236, left: -274 },
