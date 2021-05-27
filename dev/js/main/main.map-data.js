@@ -32,6 +32,123 @@ var R6MMainData = (function(R6MLangTerms, undefined){
 
   var getMapData = function getMapData() {
     return {
+      /*
+      example: {
+        name: mapNameTerms.example,
+        imgUrlPrefix: 'example',
+        objectives: [
+          'bomb', 'hostage', 'secure'
+        ],
+        floors: [
+          {
+            index: 0,
+            top: 0,
+            left: 0,
+            background: true, // background, always visible
+            dontSelect: true, // not a real floor, can't be selected
+            png: false // jpg file
+          },
+          { index: 1, top: 500, left: 0, name: floorTerms.firstFloor, png: false },
+          { index: 2, top: 0, left: -250, name: floorTerms.secondFloor, png: true }, // png file
+          { index: 3, top: -50, left: -600, name: floorTerms.roof } // jpg file; default, can be left out
+        ],
+        hostageObjectives: [
+          { floor: 1, top: 250, left: 0 },
+          { floor: 2, top: 450, left: -120 }
+        ],
+        bombObjectives: [
+          { floor: 1, top: 60, left: 90, set: 1, letter: objectiveTerms.bombShortA },
+          { floor: 1, top: 30, left: 140, set: 1, letter: objectiveTerms.bombShortB },
+          { floor: 2, top: -120, left: 60, set: 2, letter: objectiveTerms.bombShortA },
+          { floor: 2, top: -110, left: 0, set: 2, letter: objectiveTerms.bombShortB }
+        ],
+        secureObjectives: [
+          { floor: 1, top: 10, left: -40 },
+          { floor: 2, top: 200, left: 110 }
+        ],
+        // corners of building
+        zoomPoints: {
+          topLeft: { top: -368, left: -483 },
+          bottomRight: { top: 310, left: 397 }
+        },
+        // top left corner of compass (square around it)
+        compassPoints: {
+          top: 120, left: 250
+        },
+        ladders: [
+          { floor: 1, top: -440, left: 554, otherFloor: 'up' },
+          { floor: 2, top: -440, left: 554, otherFloor: 'down' }
+        ],
+        cameras: [
+          {
+            floor: 1,
+            top: -150,
+            left: -390,
+            id: 1, // cam number
+            location: exampleTerms.lobby, // room
+            otherFloor: 'up' // the cam is 'up' and not in the first floor, but can still see it
+          },
+          {
+            floor: 2,
+            top: -150,
+            left: -390,
+            id: 1, // same cam as before
+            location: exampleTerms.lobby,
+            // what can be seen: array of unclosed polygons
+            // array of array of points, where the points in the inner arrays are connected
+            los: [
+              [
+                {top: -278, left: -414}, {top: -163, left: -434}, {top: 61, left: -413}
+              ]
+            ]
+          },
+          // outdoor cam: no floor
+          {
+            outdoor: true, top: 115, left: 562, id: 7, location: exampleTerms.backAlley,
+            los: [[{top: 49, left: 577}, {top: 115, left: 584}, {top: 288, left: 571}]]
+          }
+        ],
+        // middle point of hatches 'above'
+        ceilingHatches: [
+          // example: hatch from 2F to 1F
+          { floor: 1, top: 10, left: -138 }
+        ],
+        skylights: [
+          { floor: 1, otherFloor: 'up', top: -102, left: 320 },
+          { floor: 2, top: -102, left: 320 },
+          { floor: 3, otherFloor: 'down', top: -102, left: 320 }
+        ],
+        droneTunnels: [
+          {
+            floor: 0,
+            top: -190,
+            left: -422,
+            rotate: 116, // 0: vertical, 90: horizontal
+            size: 22 // length
+          }
+        ],
+        spawnPoints: [
+          { letter: spawnTerms.a, top: -590, left: -888, description: exampleTerms.spawnBoulevard },
+          { letter: spawnTerms.b, top: -446, left: 641, description: exampleTerms.jewelryFront },
+          { letter: spawnTerms.c, top: 534, left: 652, description: exampleTerms.spawnBackAlley }
+        ],
+        roomLabels: [
+          { outdoor: true, description: exampleTerms.parkingLot, top: -575, left: -661 },
+          { floor: 1, description: exampleTerms.garageRoof, top: 236, left: -274 },
+          { floor: 1,
+            smaller: true, // slightly smaller text
+            hardToRead: true, // adds semitransparent gray background
+            description: exampleTerms.elevators, top: 170, left: -183 },
+          {
+            floor: 2,
+            veryHardToRead: true, // adds slightly less transparent gray background
+            description: exampleTerms.executiveHallway,
+            top: -166,
+            left: 22
+          }
+        ]
+      },
+      */
       bank: {
         name: mapNameTerms.bank,
         imgUrlPrefix: 'bank',
