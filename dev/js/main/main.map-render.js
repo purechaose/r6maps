@@ -233,7 +233,7 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
       var currentDeferr = $.Deferred();
 
       prefix = imgUrlPrefix;
-      imgSrc = IMG_URL + prefix + '/' + prefix + '-' + floor.index + '.jpg';
+      imgSrc = IMG_URL + prefix + '/' + prefix + '-' + floor.index + (floor.png ? '.png' : '.jpg');
       positionStyle = getPositionStyle(floor);
       classes = floor.background ? 'background ' : 'floor ' + FLOOR_CSS_TEXT[floor.index];
       html += '<img src="' + imgSrc + '" style="' + positionStyle + '" class="' + classes + '"></img>';
