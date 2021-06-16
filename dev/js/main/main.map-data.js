@@ -32,6 +32,123 @@ var R6MMainData = (function(R6MLangTerms, undefined){
 
   var getMapData = function getMapData() {
     return {
+      /*
+      example: {
+        name: mapNameTerms.example,
+        imgUrlPrefix: 'example',
+        objectives: [
+          'bomb', 'hostage', 'secure'
+        ],
+        floors: [
+          {
+            index: 0,
+            top: 0,
+            left: 0,
+            background: true, // background, always visible
+            dontSelect: true, // not a real floor, can't be selected
+            png: false // jpg file
+          },
+          { index: 1, top: 500, left: 0, name: floorTerms.firstFloor, png: false },
+          { index: 2, top: 0, left: -250, name: floorTerms.secondFloor, png: true }, // png file
+          { index: 3, top: -50, left: -600, name: floorTerms.roof } // jpg file; default, can be left out
+        ],
+        hostageObjectives: [
+          { floor: 1, top: 250, left: 0 },
+          { floor: 2, top: 450, left: -120 }
+        ],
+        bombObjectives: [
+          { floor: 1, top: 60, left: 90, set: 1, letter: objectiveTerms.bombShortA },
+          { floor: 1, top: 30, left: 140, set: 1, letter: objectiveTerms.bombShortB },
+          { floor: 2, top: -120, left: 60, set: 2, letter: objectiveTerms.bombShortA },
+          { floor: 2, top: -110, left: 0, set: 2, letter: objectiveTerms.bombShortB }
+        ],
+        secureObjectives: [
+          { floor: 1, top: 10, left: -40 },
+          { floor: 2, top: 200, left: 110 }
+        ],
+        // corners of building
+        zoomPoints: {
+          topLeft: { top: -368, left: -483 },
+          bottomRight: { top: 310, left: 397 }
+        },
+        // top left corner of compass (square around it)
+        compassPoints: {
+          top: 120, left: 250
+        },
+        ladders: [
+          { floor: 1, top: -440, left: 554, otherFloor: 'up' },
+          { floor: 2, top: -440, left: 554, otherFloor: 'down' }
+        ],
+        cameras: [
+          {
+            floor: 1,
+            top: -150,
+            left: -390,
+            id: 1, // cam number
+            location: exampleTerms.lobby, // room
+            otherFloor: 'up' // the cam is 'up' and not in the first floor, but can still see it
+          },
+          {
+            floor: 2,
+            top: -150,
+            left: -390,
+            id: 1, // same cam as before
+            location: exampleTerms.lobby,
+            // what can be seen: array of unclosed polygons
+            // array of array of points, where the points in the inner arrays are connected
+            los: [
+              [
+                {top: -278, left: -414}, {top: -163, left: -434}, {top: 61, left: -413}
+              ]
+            ]
+          },
+          // outdoor cam: no floor
+          {
+            outdoor: true, top: 115, left: 562, id: 7, location: exampleTerms.backAlley,
+            los: [[{top: 49, left: 577}, {top: 115, left: 584}, {top: 288, left: 571}]]
+          }
+        ],
+        // middle point of hatches 'above'
+        ceilingHatches: [
+          // example: hatch from 2F to 1F
+          { floor: 1, top: 10, left: -138 }
+        ],
+        skylights: [
+          { floor: 1, otherFloor: 'up', top: -102, left: 320 },
+          { floor: 2, top: -102, left: 320 },
+          { floor: 3, otherFloor: 'down', top: -102, left: 320 }
+        ],
+        droneTunnels: [
+          {
+            floor: 0,
+            top: -190,
+            left: -422,
+            rotate: 116, // 0: vertical, 90: horizontal
+            size: 22 // length
+          }
+        ],
+        spawnPoints: [
+          { letter: spawnTerms.a, top: -590, left: -888, description: exampleTerms.spawnBoulevard },
+          { letter: spawnTerms.b, top: -446, left: 641, description: exampleTerms.jewelryFront },
+          { letter: spawnTerms.c, top: 534, left: 652, description: exampleTerms.spawnBackAlley }
+        ],
+        roomLabels: [
+          { outdoor: true, description: exampleTerms.parkingLot, top: -575, left: -661 },
+          { floor: 1, description: exampleTerms.garageRoof, top: 236, left: -274 },
+          { floor: 1,
+            smaller: true, // slightly smaller text
+            hardToRead: true, // adds semitransparent gray background
+            description: exampleTerms.elevators, top: 170, left: -183 },
+          {
+            floor: 2,
+            veryHardToRead: true, // adds slightly less transparent gray background
+            description: exampleTerms.executiveHallway,
+            top: -166,
+            left: 22
+          }
+        ]
+      },
+      */
       bank: {
         name: mapNameTerms.bank,
         imgUrlPrefix: 'bank',
@@ -158,7 +275,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { outdoor: true, description: bankTerms.jewelryFront, top: -575, left: 538 },
           { outdoor: true, description: bankTerms.plaza, top: -295, left: 239 },
           { outdoor: true, description: bankTerms.mainEntrance, top: -448, left: -225 },
-          { outdoor: true, alwasyShow: true, description: bankTerms.garageRamp, top: -143, left: -486 },
+          { outdoor: true, alwaysShow: true, description: bankTerms.garageRamp, top: -143, left: -486 },
           { outdoor: true, description: bankTerms.exteriorParking, top: -216, left: -720 },
           { floor: 1, description: bankTerms.garageRoof, top: 236, left: -274 },
           { floor: 2, description: bankTerms.garageRoof, top: 236, left: -274 },
@@ -1274,150 +1391,177 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           'bomb', 'hostage', 'secure'
         ],
         floors: [
-          { index: 1, top: -715, left: -1275, background: true, name: floorTerms.firstFloor, default: true },
-          { index: 2, top: -411, left: -771, name: floorTerms.secondFloor },
-          { index: 3, top: -411, left: -771, name: floorTerms.thirdFloor },
-          { index: 4, top: -411, left: -771, name: floorTerms.roof }
+          { index: 0, top: -715, left: -1275, background: true, dontSelect: true, png: true },
+          { index: 1, top: -715, left: -1275, name: floorTerms.firstFloor, default: true, png: true },
+          { index: 2, top: -715, left: -1275, name: floorTerms.secondFloor, png: true },
+          { index: 3, top: -715, left: -1275, name: floorTerms.thirdFloor, png: true },
+          { index: 4, top: -715, left: -1275, name: floorTerms.roof, png: true }
         ],
         hostageObjectives: [
-          { floor: 3, top: -159, left: 114 },
-          { floor: 2, top: -207, left: -141 },
-          { floor: 2, top: 204, left: -116 },
-          { floor: 1, top: -12, left: -144 }
+          { floor: 2, top: 160, left: 320 },
+          { floor: 2, top: 315, left: 385 },
+          { floor: 1, top: 170, left: 355 },
+          { floor: 1, top: 300, left: 350 }
         ],
         bombObjectives: [
-          { floor: 3, top: -160, left: 151, otherFloor: 'down', set: 1, letter: objectiveTerms.bombShortB },
-          { floor: 2, top: -217, left: 45, otherFloor: 'up', set: 1, letter: objectiveTerms.bombShortA },
-          { floor: 2, top: -27, left: -262, set: 2, letter: objectiveTerms.bombShortB },
-          { floor: 2, top: 78, left: -263, set: 2, letter: objectiveTerms.bombShortA },
-          { floor: 2, top: 155, left: -96, otherFloor: 'down', set: 3, letter: objectiveTerms.bombShortA },
-          { floor: 1, top: 270, left: -151, otherFloor: 'up', set: 3, letter: objectiveTerms.bombShortB },
-          { floor: 1, top: -62, left: -190, set: 4, letter: objectiveTerms.bombShortA },
-          { floor: 1, top: 83, left: -344, set: 4, letter: objectiveTerms.bombShortB }
+          { floor: 2, top: 140, left: 405, set: 1, letter: objectiveTerms.bombShortA },
+          { floor: 2, top: 60, left: 435, set: 1, letter: objectiveTerms.bombShortB },
+          { floor: 2, top: 305, left: 375, set: 2, letter: objectiveTerms.bombShortA },
+          { floor: 2, top: 180, left: 405, set: 2, letter: objectiveTerms.bombShortB },
+          { floor: 1, top: 340, left: 390, set: 3, letter: objectiveTerms.bombShortA },
+          { floor: 1, top: 260, left: 400, set: 3, letter: objectiveTerms.bombShortB },
+          { floor: 1, top: 155, left: 240, set: 4, letter: objectiveTerms.bombShortA },
+          { floor: 1, top: 15, left: 335, set: 4, letter: objectiveTerms.bombShortB }
         ],
         secureObjectives: [
-          { floor: 3, top: -159, left: 75 },
-          { floor: 2, top: 56, left: -149 },
-          { floor: 1, top: -153, left: -125 },
-          { floor: 1, top: 269, left: -109 }
+          { floor: 2, top: 15, left: 340 },
+          { floor: 2, top: 105, left: 440 },
+          { floor: 1, top: 155, left: 365 },
+          { floor: 1, top: 285, left: 350 }
         ],
         zoomPoints: {
-          topLeft: { top: -310, left: -584 },
-          bottomRight: { top: 354, left: 183 }
+          topLeft: { top: -130, left: -105 },
+          bottomRight: { top: 425, left: 725 }
         },
         compassPoints: {
-          top: 280, left: 330
+          top: 610, left: 325
         },
         ladders: [
-          { floor: 1, top: 476, left: -161, otherFloor: 'up' },
-          { floor: 2, top: 476, left: -161, otherFloor: 'down' },
-          { floor: 1, top: 309, left: 19, otherFloor: 'up' },
-          { floor: 2, top: 309, left: 19, otherFloor: 'down' },
-          { floor: 2, top: 166, left: 343, otherFloor: 'up' },
-          { floor: 3, top: 166, left: 343, otherFloor: 'down' },
-          { floor: 3, top: -138, left: 477, otherFloor: 'up' },
-          { floor: 4, top: -138, left: 477, otherFloor: 'down' }
+          { outdoor: true, top: 75, left: 580 },
+          { floor: 1, top: 270, left: 705, otherFloor: 'up' },
+          { floor: 2, top: 270, left: 705, otherFloor: 'down' },
+          { floor: 2, top: -195, left: 150, otherFloor: 'up' },
+          { floor: 4, top: -195, left: 150, otherFloor: 'down' }
         ],
         cameras: [
           {
-            floor: 3, top: -295, left: -45, id: 1, location: favelaTerms.backStairs,
-            los: [[{top: -187, left: -62 }, {top: -310, left: -62}, {top: -310, left: 31}]]
+            outdoor: true, top: -35, left: 15, id: 1, location: favelaTerms.footballField,
+            los: [[{top: -105, left: 300 }, {top: -95, left: 120}, {top: -35, left: 15}, {top: 210, left: 25}]]
           },
           {
-            floor: 2, top: 299, left: -210, id: 2, location: favelaTerms.mainStairs,
-            los: [[{top: 153, left: -256}, {top: 312, left: -256}, {top: 312, left: -124}]]
+            floor: 3, top: 90, left: 305, id: 2, location: favelaTerms.roof,
+            los: [[{top: 400, left: 285}, {top: 90, left: 305}, {top: 130, left: 500}]]
           },
           {
-            floor: 1, top: -126, left: -69, id: 3, location: favelaTerms.laundryRoom,
-            los: [[{top: -200, left: -86}, {top: -111, left: -86}, {top: -111, left: 50}], [{top: -201, left: 11}, {top: -285, left: 46}]]
+            floor: 4, top: 90, left: 305, id: 2, location: favelaTerms.roof, otherFloor: 'down'
           },
           {
-            floor: 1, top: 156, left: -246, id: 4, location: favelaTerms.stairHall,
-            los: [[{top: 224, left: -256}, {top: -60, left: -266}], [{top: 167, left: -209}, {top: 181, left: -102}]]
+            outdoor: true, top: 510, left: 555, id: 3, location: favelaTerms.street,
+            los: [[{top: 625, left: 120}, {top: 510, left: 555}, {top: 365, left: 925}]]
           },
           {
-            outdoor: true, top: -384, left: -498, id: 5, location: favelaTerms.schoolAlley,
-            los: [[{top: 74, left: -600}, {top: -416, left: -521}, {top: -446, left: -453}]]
+            floor: 3, top: 20, left: 540, id: 4, location: favelaTerms.trashChuteStairs,
+            los: [[{top: 90, left: 470}, {top: 20, left: 540}], [{top: -45, left: 600}]]
           },
           {
-            outdoor: true, top: 346, left: 18, id: 6, location: favelaTerms.street,
-            los: [[{top: 434, left: -615}, {top: 408, left: 484}]]
+            floor: 2, top: -90, left: 480, id: 5, location: favelaTerms.trashChuteStairs,
+            los: [[{top: -65, left: 580}, {top: -95, left: 580}, {top: -95, left: 480}, {top: 160, left: 490}]]
           },
           {
-            outdoor: true, top: -525, left: 230, id: 7, location: favelaTerms.backAlley,
-            los: [[{top: -562, left: -89}, {top: -562, left: 248}, {top: -320, left: 401}]]
+            floor: 2, top: 405, left: 280, id: 6, location: favelaTerms.mezzanineStairs, otherFloor: 'up',
+            los: [[{top: 290, left: 190}, {top: 405, left: 280}, {top: 235, left: 270}]]
+          },
+          {
+            floor: 2, top: 405, left: 280, id: 6, location: favelaTerms.mezzanineStairs,
+            los: [[{top: 45, left: 210}, {top: 240, left: 245}, {top: 405, left: 195}, {top: 405, left: 280}, {top: 240, left: 280}]]
+          },
+          {
+            floor: 1, top: -90, left: 465, id: 7, location: favelaTerms.trashChuteStairs,
+            los: [[{top: -60, left: 565}, {top: -90, left: 565}, {top: -90, left: 410}, {top: -45, left: 405}], [{top: 220, left: 480}, {top: -90, left: 465}, {top: 185, left: 500}]]
           }
         ],
         ceilingHatches: [
-          { floor: 1, top: 1, left: -179 },
-          { floor: 1, top: 39, left: -292 },
-          { floor: 2, top: -222, left: 79 },
-          { floor: 2, top: 264, left: -66 },
-          { floor: 1, top: -244, left: -121 }
+          { floor: 1, top: 60, left: 200 },
+          { floor: 1, top: 350, left: 495 }
         ],
         skylights: [],
         droneTunnels: [
-          { floor: 1, top: 111, left: -380, rotate: 90, size: DRONE_MED },
-          { floor: 1, top: -285, left: -32, rotate: 0, size: DRONE_MED },
-          { floor: 2, top: 128, left: -135, rotate: 0, size: DRONE_SMALL },
-          { floor: 1, top: 5, left: -281, rotate: 0, size: DRONE_SMALL },
-          { floor: 2, top: -110, left: -184, rotate: 0, size: DRONE_SMALL },
-          { floor: 2, top: -91, left: -201, rotate: 90, size: DRONE_SMALL },
-          { floor: 1, top: 126, left: -99, rotate: 0, size: DRONE_SMALL }
+          { floor: 1, top: 290, left: 130, rotate: 0, size: 90 },
+          { floor: 1, top: 340, left: 180, rotate: 90, size: 80 },
+          { floor: 1, top: 150, left: 220, rotate: 90, size: DRONE_SMALL },
+          { floor: 1, top: 85, left: 340, rotate: 0, size: DRONE_SMALL },
+          { floor: 1, top: 160, left: 470, rotate: 90, size: DRONE_SMALL },
+          { floor: 1, top: -40, left: 190, rotate: 0, size: DRONE_SMALL },
+          { floor: 1, top: -70, left: 570, rotate: 90, size: 20 },
+          { floor: 1, top: -45, left: 560, rotate: 0, size: 50 },
+          { floor: 2, top: 215, left: 270, rotate: 90, size: DRONE_SMALL },
+          { floor: 2, top: 200, left: 510, rotate: 0, size: 60 },
+          { floor: 2, top: 230, left: 525, rotate: 90, size: 30 },
+          { floor: 2, top: 295, left: 485, rotate: 90, size: DRONE_SMALL },
+          { floor: 2, top: 10, left: 590, rotate: 90, size: DRONE_SMALL },
+          { floor: 2, top: -60, left: 470, rotate: 90, size: DRONE_SMALL },
+          { floor: 2, top: 35, left: 245, rotate: 0, size: DRONE_SMALL }
         ],
         spawnPoints: [
-          { letter: spawnTerms.a, top: -162, left: 562, description: favelaTerms.rooftops },
-          { letter: spawnTerms.b, top: 464, left: -668, description: favelaTerms.market },
-          { letter: spawnTerms.c, top: -617, left: -469, description: favelaTerms.schoolAlley }
+          { letter: spawnTerms.a, top: 40, left: 870, description: favelaTerms.rooftops },
+          { letter: spawnTerms.b, top: 575, left: 5, description: favelaTerms.market },
+          { letter: spawnTerms.c, top: -345, left: 145, description: favelaTerms.schoolAlley }
         ],
         roomLabels: [
-          { floor: 3, top: -266, left: 109, description: favelaTerms.packagingRoom, veryHardToRead: true },
-          { floor: 2, top: -54, left: -142, description: favelaTerms.footballApartment },
-          { floor: 2, top: 112, left: -142, description: favelaTerms.footballApartment.removeBreakTags() },
-          { floor: 1, top: -178, left: -213, description: favelaTerms.armoryRoom },
-          { floor: 1, top: 210, left: -159, description: favelaTerms.auntsApartment, veryHardToRead: true },
-          { floor: 1, top: 173, left: -61, description: favelaTerms.auntsApartment, veryHardToRead: true },
-          { floor: 2, top: 190, left: -42, description: favelaTerms.auntsBedroom, veryHardToRead: true },
-          { floor: 2, top: -205, left: -191, description: favelaTerms.growRoom, veryHardToRead: true },
-          { floor: 1, top: -60, left: -136, description: favelaTerms.bikersApartment, hardToRead: true },
-          { floor: 1, top: 78, left: -162, description: favelaTerms.bikersApartment, veryHardToRead: true },
-          { floor: 2, top: -253, left: 95, description: favelaTerms.methLab, veryHardToRead: true },
-          { floor: 2, top: -69, left: -321, description: favelaTerms.footballBedroom },
-          { floor: 2, top: 85, left: -321, description: favelaTerms.footballOffice, hardToRead: true },
-          { floor: 1, top: 44, left: -340, description: favelaTerms.bikersBedroom },
-          { floor: 3, top: -266, left: -10, description: favelaTerms.backStairs, hardToRead: true },
-          { floor: 2, top: -250, left: -37, description: favelaTerms.backStairs, hardToRead: true },
-          { floor: 1, top: -250, left: -37, description: favelaTerms.backStairs, hardToRead: true },
-          { floor: 2, top: 279, left: -165, description: favelaTerms.auntsHall, hardToRead: true },
-          { floor: 2, top: 299, left: -63, description: favelaTerms.kidsRoom, hardToRead: true },
-          { floor: 2, top: 223, left: -233, smaller: true, description: favelaTerms.mainStairs, hardToRead: true },
-          { floor: 3, top: 223, left: -228, smaller: true, description: favelaTerms.mainStairs, hardToRead: true },
-          { floor: 1, top: 223, left: -236, smaller: true, description: favelaTerms.mainStairs, hardToRead: true },
-          { floor: 1, top: 86, left: -245, smaller: true, description: favelaTerms.stairHall },
-          { floor: 2, top: -167, left: -299, description: favelaTerms.roof, hardToRead: true },
-          { floor: 3, top: 33, left: -188, description: favelaTerms.roof },
-          { floor: 1, top: -155, left: -3, description: favelaTerms.laundryRoom, hardToRead: true },
-          { floor: 1, top: -241, left: -157, description: favelaTerms.vaultRoom },
-          { floor: 1, top: -63, left: -306, description: favelaTerms.bikersGarage, hardToRead: true },
-          { outdoor: true, top: -356, left: 524, description: favelaTerms.backAlley },
-          { outdoor: true, top: -487, left: 213, description: favelaTerms.backAlley },
-          { outdoor: true, top: -646, left: -157, description: favelaTerms.schoolAlley },
-          { outdoor: true, top: -147, left: -478, description: favelaTerms.footballPitch },
-          { floor: 1, top: 310, left: -417, description: favelaTerms.market },
-          { floor: 2, top: 310, left: -417, description: favelaTerms.market },
-          { outdoor: true, top: 232, left: 580, description: favelaTerms.street },
-          { outdoor: true, top: 394, left: 122, description: favelaTerms.street },
-          { outdoor: true, top: 103, left: 365, description: favelaTerms.rooftops, hardToRead: true },
-          { outdoor: true, top: 130, left: 79, description: favelaTerms.courtyard },
-          { floor: 1, top: -143, left: 213, description: favelaTerms.courtyard },
-          { floor: 2, top: -143, left: 213, description: favelaTerms.courtyard },
-          { outdoor: true, top: -330, left: -34, description: favelaTerms.accessAlley },
-          { outdoor: true, top: 242, left: -294, description: favelaTerms.marketAlley, smaller: true },
-          { outdoor: true, top: -552, left: -227, description: favelaTerms.schoolRooftops },
-          { outdoor: true, top: -403, left: 95, description: favelaTerms.schoolRooftops, smaller: true },
-          { floor: 1, top: 344, left: -90, description: favelaTerms.shop },
-          { floor: 3, top: 237, left: -412, description: favelaTerms.marketRooftops, hardToRead: true },
-          { floor: 3, top: 420, left: -412, description: favelaTerms.marketRooftops, hardToRead: true }
+          // 1F
+          { floor: 1, top: -15, left: 210, description: favelaTerms.greenBathroom, smaller: true, hardToRead: true },
+          { floor: 1, top: 70, left: 290, description: favelaTerms.greenApartment, hardToRead: true },
+          { floor: 1, top: 55, left: 405, description: favelaTerms.greenFoosball, hardToRead: true },
+          { floor: 1, top: -65, left: 445, description: favelaTerms.trashChuteStairs, hardToRead: true },
+          { floor: 1, top: 5, left: 510, description: favelaTerms.trashChuteStairs, hardToRead: true },
+          { floor: 1, top: 125, left: 390, description: favelaTerms.blueApartment, hardToRead: true },
+          { floor: 1, top: 200, left: 420, description: favelaTerms.blueKitchen, hardToRead: true, smaller: true },
+          { floor: 1, top: 125, left: 265, description: favelaTerms.blueBedroom, hardToRead: true },
+          { floor: 1, top: 165, left: 490, description: favelaTerms.laundryHall, hardToRead: true, smaller: true },
+          { floor: 1, top: 315, left: 245, description: favelaTerms.mezzanineStairs, hardToRead: true, smaller: true },
+          { floor: 1, top: 155, left: 200, description: favelaTerms.footballHall, hardToRead: true, smaller: true },
+          { floor: 1, top: 335, left: 330, description: favelaTerms.pinkApartment, hardToRead: true },
+          { floor: 1, top: 275, left: 450, description: favelaTerms.pinkKitchen, hardToRead: true },
+          { floor: 1, top: 270, left: 545, description: favelaTerms.pinkSolarium, hardToRead: true, smaller: true },
+
+          // 2F
+          { floor: 2, top: 0, left: 530, description: favelaTerms.trashChuteStairs, hardToRead: true },
+          { floor: 2, top: 160, left: 455, description: favelaTerms.coinFarm, hardToRead: true },
+          { floor: 2, top: 20, left: 385, description: favelaTerms.storage },
+          { floor: 2, top: 10, left: 290, description: favelaTerms.armory, smaller: true },
+          { floor: 2, top: 210, left: 225, description: favelaTerms.redCorridor },
+          { floor: 2, top: 110, left: 205, description: favelaTerms.redStairs, smaller: true },
+          { floor: 2, top: 275, left: 235, description: favelaTerms.mezzanineStairs, hardToRead: true },
+          { floor: 2, top: 280, left: 425, description: favelaTerms.bunks, hardToRead: true },
+          { floor: 2, top: 365, left: 460, description: favelaTerms.office, smaller: true, hardToRead: true },
+          { floor: 2, top: 120, left: 300, description: favelaTerms.hackerDen, hardToRead: true },
+
+          // 3F
+          { floor: 3, top: -55, left: 475, description: favelaTerms.electrical, hardToRead: true },
+          { floor: 3, top: 10, left: 505, description: favelaTerms.trashChuteStairs, hardToRead: true },
+          { floor: 3, top: 100, left: 210, description: favelaTerms.redStairs, hardToRead: true },
+          { floor: 3, top: 35, left: 360, description: favelaTerms.roof, hardToRead: true },
+          { floor: 3, top: 220, left: 390, description: favelaTerms.roof, hardToRead: true },
+          { floor: 3, top: 370, left: 235, description: favelaTerms.roof, hardToRead: true },
+
+          // 4F
+          { floor: 4, top: 35, left: 360, description: favelaTerms.roof, hardToRead: true },
+          { floor: 4, top: 220, left: 390, description: favelaTerms.roof, hardToRead: true },
+          { floor: 4, top: 370, left: 235, description: favelaTerms.roof, hardToRead: true },
+
+          // outside
+          { outdoor: true, top: -115, left: 415, description: favelaTerms.backAlley },
+          { outdoor: true, top: -330, left: 355, description: favelaTerms.backAlley },
+          { outdoor: true, top: -255, left: 155, description: favelaTerms.schoolyard },
+          { outdoor: true, top: 95, left: 90, description: favelaTerms.footballField },
+          { outdoor: true, top: 610, left: 125, description: favelaTerms.street },
+          { outdoor: true, top: 465, left: 390, description: favelaTerms.street },
+          { outdoor: true, top: 380, left: 720, description: favelaTerms.street, hardToRead: true },
+          { outdoor: true, top: 235, left: 720, description: favelaTerms.rooftops, veryHardToRead: true },
+          { outdoor: true, top: -40, left: 850, description: favelaTerms.rooftops, hardToRead: true },
+          { outdoor: true, top: 130, left: 590, description: favelaTerms.courtyard },
+          { outdoor: true, top: 355, left: -30, description: favelaTerms.marketAlley },
+          { outdoor: true, top: -200, left: 355, description: favelaTerms.schoolRoof, hardToRead: true },
+          { outdoor: true, top: -150, left: 185, description: favelaTerms.schoolRoof, hardToRead: true },
+          { floor: 3, top: 400, left: 105, description: favelaTerms.marketRoof, hardToRead: true },
+          { floor: 3, top: 455, left: 90, description: favelaTerms.marketRoof, hardToRead: true },
+          { floor: 2, top: 325, left: 570, description: favelaTerms.solariumRoof, hardToRead: true },
+          { floor: 3, top: 325, left: 570, description: favelaTerms.solariumRoof, hardToRead: true },
+          { floor: 4, top: 325, left: 570, description: favelaTerms.solariumRoof, hardToRead: true },
+          { outdoor: true, top: 440, left: 215, description: favelaTerms.tunnel },
+          { outdoor: true, top: 270, left: 155, description: favelaTerms.tunnel },
+          { floor: 2, top: -10, left: 225, description: favelaTerms.armoryBalcony },
+          { floor: 2, top: -60, left: 365, description: favelaTerms.storageBalcony }
         ]
       },
       fortress: {
